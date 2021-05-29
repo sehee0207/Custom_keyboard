@@ -10,10 +10,10 @@
 
 
     <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#FF018786</color> <!-- 키보드 뒷 배경 -->
+    <color name="colorPrimaryDark">#FFFFFF</color> <!-- 키보드 뒷 배경 -->
     <color name="colorAccent">#FF4081</color>
 
-    <color name="keyboard_background_color">#FF03AC35</color> <!-- 키보드 몸체 -->
-    <color name="keyboard_divider">#FF03DAC5</color> <!-- 키보드마다 아래 작은 색상 -->
+    <color name="keyboard_background_color">#E3E3E3</color> <!-- 키보드 몸체 -->
+    <color name="keyboard_divider">#AF9DC6</color> <!-- 키보드마다 아래 작은 색상 -->
     <color name="keyboard_pressed">#FF6200EE</color>
 </resources>

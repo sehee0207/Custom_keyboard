@@ -5,11 +5,10 @@
         android:imeSubtypeLocale="en_US"
         android:imeSubtypeMode="keyboard"
     />
-    
-<!-- 맞는지 잘 모르겠음 -->
-<!--    <subtype-->
-<!--        android:label="Korean"-->
-<!--        android:imeSubtypeLacale="ko_KR"-->
-<!--        android:imeSubtypeMode="keyboard"-->
-<!--        />-->
+
+    <subtype
+        android:label="Korean"
+        android:imeSubtypeLocale="ko_KR"
+        android:imeSubtypeMode="keyboard"
+        />
 </input-method>

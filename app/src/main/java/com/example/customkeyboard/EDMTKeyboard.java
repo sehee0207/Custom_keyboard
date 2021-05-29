@@ -30,6 +30,16 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
     }
 
     @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event){
+        switch(keyCode) {
+            case KeyEvent.KEYCODE_LANGUAGE_SWITCH:
+                Intent intent = new Intent(this, hangul.class);
+                startActivity(intent);
+        }
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
     public void onPress(int i) {
 
     }
@@ -48,6 +58,7 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
             case Keyboard.KEYCODE_DELETE:
                 ic.deleteSurroundingText(1, 0);
             break;
+
             case Keyboard.KEYCODE_SHIFT:
                 isCaps = !isCaps;
                 keyboard.setShifted(isCaps);
