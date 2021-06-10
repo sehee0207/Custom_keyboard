@@ -32,8 +32,7 @@
     </Row>
 
     <Row>
-        <Key android:keyLabel=" " android:keyEdgeFlags="left"></Key>
-        <Key android:keyLabel="a" android:codes="97"></Key>
+        <Key android:keyLabel="a" android:codes="97" android:horizontalGap="5%p"></Key>
         <Key android:keyLabel="s" android:codes="115"></Key>
         <Key android:keyLabel="d" android:codes="100"></Key>
         <Key android:keyLabel="f" android:codes="102"></Key>
@@ -41,9 +40,8 @@
         <Key android:keyLabel="h" android:codes="104"></Key>
         <Key android:keyLabel="j" android:codes="106"></Key>
         <Key android:keyLabel="k" android:codes="107"></Key>
-        <Key android:keyLabel="l" android:codes="108"></Key>
-        <Key android:keyLabel=" " android:keyEdgeFlags="right"></Key>
-<!--        <Key android:keyLabel="\# \@" android:keyEdgeFlags="right" android:codes="35,64"></Key>-->
+        <Key android:keyLabel="l" android:codes="108" android:keyEdgeFlags="right"></Key>
+        <!--        <Key android:keyLabel="\# \@" android:keyEdgeFlags="right" android:codes="35,64"></Key>-->
     </Row>
 
     <Row>
@@ -61,7 +59,7 @@
     <Row android:rowEdgeFlags="bottom">
         <Key android:keyLabel="\? ! :" android:keyWidth="10%p" android:keyEdgeFlags="right" android:codes="63,33,58"></Key>
 <!--        <Key android:keyLabel="\. ," android:keyWidth="10%p" android:codes="46,44"></Key>-->
-        <Key android:keyLabel="영/한" android:keyWidth="10%p" android:codes="204"></Key>
+        <Key android:keyLabel="영/한" android:keyWidth="10%p" android:codes="-2"></Key>
 <!--        <Key android:keyLabel="/" android:keyWidth="10%p" android:codes="47"></Key>-->
         <Key android:keyLabel="SPACE" android:keyWidth="60%p" android:isRepeatable="true" android:codes="32"></Key>
         <Key android:keyLabel="ENTER" android:keyWidth="20%p" android:keyEdgeFlags="right" android:codes="13"></Key>

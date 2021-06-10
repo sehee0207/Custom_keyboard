@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.View;
 import android.view.inputmethod.InputConnection;
+import android.view.inputmethod.InputMethodSubtype;
 
 import java.security.Key;
 
@@ -19,6 +20,14 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
     private Keyboard keyboard;
 
     private boolean isCaps = false;
+
+//    public void onCurrentInputMethodSubtypeChanged(InputMethodSubtype subtype){
+//        if(subtype.getExtraValue().equals("Korean"))mCurKeyboard = mHangulKeyboard;
+//        else mCurKeyboard = mQwertyKeyboard;
+//        setLatinKeyboard(mCurKeyboard);
+//        mInputView.closing();
+//        mInputView.setSubtypeOnSpaceKey(subtype);
+//    }
 
     @Override
     public View onCreateInputView() {
@@ -72,6 +81,8 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
                 if(Character.isLetter(code) && isCaps)
                     code = Character.toUpperCase(code);
                 ic.commitText(String.valueOf(code), 1);
+            case Keyboard.KEYCODE_MODE_CHANGE:
+
         }
 
     }
