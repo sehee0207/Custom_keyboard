@@ -1,0 +1,25 @@
+/**
+*하나의 메소드에 대한 코드 설명, 주석, 해석은 바로 위에 달려있음
+*예를 들자면 이건 구조예시메소드임 에 대한 주석
+*/
+public 구조예시메소드임(int text);
+
+링크로 연결 해서 ctrl 누르면 넘어가는 메소드 ? 서비스 ? 들에도
+간단하게라도 주석 달아둠!
+
+---------------------------------------------------------------------------------------------
+
+public void afterTextChanged(Editable s);
+-> 사용자가 텍스트를 변경할 때 콜백을 받을 수 있음
+
+1) InputMethodService.java 에 69번째 줄 {@link android.widget.EditText} + ctrl
+2) {@link android.widget.EditText} 에서 59번째 {@link android.text.TextWatcher} + ctrl
+---------------------------------------------------------------------------------------------
+
+boolean setComposingText(CharSequence text, int newCursorPosition);
+현재 텍스트를 지정된 텍스트로 바꾸고 새 커서 위치 설정
+
+---------------------------------------------------------------------------------------------
+
+boolean commitCorrection(CorrectionInfo correctionInfo);
+텍스트를 텍스트 상자에 커밋하고 새 커서 위치를 설정
