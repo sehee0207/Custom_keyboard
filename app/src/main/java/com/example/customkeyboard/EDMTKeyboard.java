@@ -1,5 +1,6 @@
 package com.example.customkeyboard;
 
+import android.annotation.SuppressLint;
 import android.app.Service;
 import android.content.Intent;
 import android.inputmethodservice.InputMethodService;
@@ -10,11 +11,13 @@ import android.os.IBinder;
 import android.provider.MediaStore;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.inputmethod.EditorInfo;
 import android.view.inputmethod.InputConnection;
 import android.view.inputmethod.InputMethodSubtype;
 
 import java.security.Key;
 
+@SuppressWarnings("EqualsBetweenInconvertibleTypes")
 public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnKeyboardActionListener {
     private KeyboardView kv;
     private Keyboard keyboard;
@@ -29,6 +32,7 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
 //        mInputView.setSubtypeOnSpaceKey(subtype);
 //    }
 
+    @SuppressLint("InflateParams")
     @Override
     public View onCreateInputView() {
         kv = (KeyboardView)getLayoutInflater().inflate(R.layout.keyboard, null);
@@ -40,11 +44,6 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event){
-        switch(keyCode) {
-            case KeyEvent.KEYCODE_LANGUAGE_SWITCH:
-                Intent intent = new Intent(this, hangul.class);
-                startActivity(intent);
-        }
         return super.onKeyDown(keyCode, event);
     }
 
@@ -62,6 +61,10 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
     public void onKey(int i, int[] ints) {
 
         InputConnection ic = getCurrentInputConnection();
+
+//        if(ic.equals(3))
+//            ic.setComposingText("what!", 1);
+
         playClick(i);
         switch (i){
             case Keyboard.KEYCODE_DELETE:
@@ -81,11 +84,13 @@ public class EDMTKeyboard extends InputMethodService implements KeyboardView.OnK
                 if(Character.isLetter(code) && isCaps)
                     code = Character.toUpperCase(code);
                 ic.commitText(String.valueOf(code), 1);
-            case Keyboard.KEYCODE_MODE_CHANGE:
-
+                //if(EditorInfo.== "tlqkf")
+                    //ic.commitText("땡", 1);
         }
 
     }
+
+
 
     private void playClick(int i) {
         AudioManager am = (AudioManager)getSystemService(AUDIO_SERVICE);
